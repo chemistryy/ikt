@@ -1,0 +1,241 @@
+<head>
+<meta charset="utf-8">
+<title>Соединение костей черепа</title>
+</head>
+<style>
+	* {
+		text-align: center;
+		background-color: silver;
+	}
+	answer1 {
+		width: 10px;
+		height: 10px;
+	}
+	#button {
+		border-radius: 5px;
+		box-sizing: border-box;
+		width: 150px;
+		height: 50px;
+		font-size: 18px;
+	}
+	#test div {
+		margin-bottom: 1px;
+	}
+
+	.correct {
+		border: 2px solid green;
+	}
+
+	.incorrect {
+		border: 2px solid red;
+	}
+</style>
+<h2><u>Тесты на тему "Соединение костей черепа"</u></h2>
+<div id="test"></div>
+
+<button id="button">Проверить</button>
+<!--
+	<div>
+		<p>Question 1</p>
+		<form>
+			<input type="radio" name="1" data-answer-num="0">
+			<input type="radio" name="1" data-answer-num="1">
+			<input type="radio" name="1" data-answer-num="2">
+			<input type="radio" name="1" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 2</p>
+		<form>
+			<input type="radio" name="2" data-answer-num="0">
+			<input type="radio" name="2" data-answer-num="1">
+			<input type="radio" name="2" data-answer-num="2">
+			<input type="radio" name="2" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 3</p>
+		<form>
+			<input type="radio" name="3" data-answer-num="0">
+			<input type="radio" name="3" data-answer-num="1">
+			<input type="radio" name="3" data-answer-num="2">
+			<input type="radio" name="3" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 4</p>
+		<form>
+			<input type="radio" name="4" data-answer-num="0">
+			<input type="radio" name="4" data-answer-num="1">
+			<input type="radio" name="4" data-answer-num="2">
+			<input type="radio" name="4" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 5</p>
+		<form>
+			<input type="radio" name="5" data-answer-num="0">
+			<input type="radio" name="5" data-answer-num="1">
+			<input type="radio" name="5" data-answer-num="2">
+			<input type="radio" name="5" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 6</p>
+		<form>
+			<input type="radio" name="6" data-answer-num="0">
+			<input type="radio" name="6" data-answer-num="1">
+			<input type="radio" name="6" data-answer-num="2">
+			<input type="radio" name="6" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 7</p>
+		<form>
+			<input type="radio" name="7" data-answer-num="0">
+			<input type="radio" name="7" data-answer-num="1">
+			<input type="radio" name="7" data-answer-num="2">
+			<input type="radio" name="7" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 8</p>
+		<form>
+			<input type="radio" name="8" data-answer-num="0">
+			<input type="radio" name="8" data-answer-num="1">
+			<input type="radio" name="8" data-answer-num="2">
+			<input type="radio" name="8" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 9</p>
+		<form>
+			<input type="radio" name="9" data-answer-num="0">
+			<input type="radio" name="9" data-answer-num="1">
+			<input type="radio" name="9" data-answer-num="2">
+			<input type="radio" name="9" data-answer-num="3">
+	   </form>
+	</div>
+	<div>
+		<p>Question 10</p>
+		<form>
+			<input type="radio" name="10" data-answer-num="0">
+			<input type="radio" name="10" data-answer-num="1">
+			<input type="radio" name="10" data-answer-num="2">
+			<input type="radio" name="10" data-answer-num="3">
+	   </form>
+	</div>
+-->
+<p>Выполнил Койяш Расул</p>
+<p>&copy2021 Все права защищены</p>
+<script>
+let test = document.querySelector('#test');
+
+var sizeIs=20;
+function changeSize(){
+	sizeIs=sizeIs+5;
+	document.getElementById("textfield").style.width=sizeIs+"px";
+}
+
+   let questions = [
+   {
+   	text: '<b>1). Из скольких костей состоит череп?</b><br> a) 22 &nbsp b) 23 &nbsp c) 24 &nbsp d) 25',
+   	right: 1,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>2). К парной кости лицевого отдела черепа относится:</b><br> a) нижняя челюсть b) сошник<br> c) верхняя челюсть d) подъязычная кость',
+   	right: 2,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>3). Височно-нижнечелюстной сустав имеет оси движения:</b><br> a) фронтальная, сагиттальная b) вертикальная (продольная)<br> c) фронтальная, вертикальная d) многоосный',
+   	right: 2,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>4). Сколькими суставами череп соединен с туловищем?</b><br> a) 4 &nbsp b) 3 &nbsp c) 2 &nbsp d) 1',
+   	right: 1,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>5). Между теменными и лобной костью находится шов</b><br> a) сагиттальный &nbsp b) ламбдовидный &nbsp c) чешуйчатый &nbsp d) венечный',
+   	right: 3,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>6). Между теменными костями находится шов</b><br> a) сагиттальный &nbsp b) ламбдовидный &nbsp c) чешуйчатый &nbsp d) венечный',
+   	right: 0,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>7). Между теменными и затылочной костью находится шов</b><br> a) сагиттальный &nbsp b) ламбдовидный &nbsp c) чешуйчатый &nbsp d) венечный',
+   	right: 1,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>8). Между теменными и височными костями находится шов</b><br> a) сагиттальный &nbsp b) ламбдовидный &nbsp c) чешуйчатый &nbsp d) венечный',
+   	right: 2,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>9). Кости лицевого отдела черепа соединены каким швом?</b><br> a) сагиттальный &nbsp b) ламбдовидный &nbsp c) чешуйчатый &nbsp d) плоский',
+   	right: 3,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+   {
+   	text: '<b>10). Латеральный атлантоосевой сустав образован:</b><br> a) Нижней суставной ямкой атланта, верхней суставной поверхностью осевого позвонка<br> b) Ямкой дуги атланта, передней суставной поверхностью зуба осевого позвонка <br> c) Мыщелком затылочной кости, верхней суставной ямкой атланта <br> d) Нижнечелюстной ямкой височной кости, головкой нижней челюсти',
+   	right: 0,
+   	answers: ['answer1', 'answer2', 'answer3', 'answer4',]
+   },
+];
+
+	let i = 1;
+	for (let question of questions) {
+		let div = document.createElement('div');
+		test.appendChild(div);
+
+		let p = document.createElement('p');
+		p.innerHTML = question.text;
+		div.appendChild(p);
+
+		let form = document.createElement('form');
+		test.appendChild(form);
+		form.dataset.right = question.right;
+		
+		let j = 0;
+		for (let answer of question.answers) {
+				let input = document.createElement('input');
+				input.type = 'radio';
+				input.name = i;
+				input.dataset.answerNum = j++;
+		      form.appendChild(input);
+		}
+
+				i++;
+	}
+
+	let button = document.querySelector('#button');
+	button.addEventListener ('click', function() {
+		let forms = document.querySelectorAll('#test form');
+
+		for (let form of forms) {
+			form.classList.remove('correct');
+			form.classList.remove('incorrect');
+
+			let inputs = form.querySelectorAll('input');
+
+				for (let input of inputs) {
+					if (input.checked) {
+						if (input.dataset.answerNum == form.dataset.right) {
+							form.classList.add('correct');
+						} else {
+							form.classList.add('incorrect');
+						}
+
+						break;
+					}
+				}
+		}
+	}); 
+</script>
